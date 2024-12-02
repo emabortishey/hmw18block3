@@ -39,7 +39,8 @@ public:
 	Cat() : Cat("None", "0%", 50) { }
 	explicit Cat(const string& fur_P) : Cat(fur_P, "0%", 50) { }
 	Cat(const string& fur_P, string breed_P) : Cat(fur_P, breed_P, 0) { }
-	Cat(const string& fur_P, string breed_P, int whiskers_P ) : fur_markings{fur_P}, breed{breed_P}, whiskers_lenth{whiskers_P} { }
+	Cat(const string& fur_P, string breed_P, int whiskers_P) : fur_markings{ fur_P }, breed{ breed_P }, whiskers_lenth{ whiskers_P } { }
+	Cat(const string& fur_P, string breed_P, int whiskers_P, string class_P, string area_P, int duration_P) : fur_markings{ fur_P }, breed{ breed_P }, whiskers_lenth{ whiskers_P }, Animal{ class_P, area_P, duration_P } { }
 
 	Cat(const Cat& obj) : fur_markings{ obj.fur_markings }, breed{ obj.breed }, whiskers_lenth{ obj.whiskers_lenth } { }
 
@@ -65,6 +66,7 @@ public:
 	explicit Dog(const string& theme_P) : Dog(theme_P, "0%", 50) { }
 	Dog(const string& color_P, string breed_P) : Dog(color_P, breed_P, 0) { }
 	Dog(const string& color_P, string breed_P, int amount_P) : fur_color{ color_P }, breed{ breed_P }, teeth_amount{ amount_P } { }
+	Dog(const string& color_P, string breed_P, int amount_P, string class_P, string area_P, int duration_P) : fur_color{ color_P }, breed{ breed_P }, teeth_amount{ amount_P }, Animal{ class_P, area_P, duration_P } { }
 
 	Dog(const Dog& obj) : fur_color{ obj.fur_color }, breed{ obj.breed }, teeth_amount{ obj.teeth_amount } { }
 
@@ -90,6 +92,7 @@ public:
 	explicit Parrot(const string& color_P) : Parrot(color_P, "0%", 50) { }
 	Parrot(const string& color_P, string breed_P) : Parrot(color_P, breed_P, 0) { }
 	Parrot(const string& color_P, string breed_P, int beak_P) : feather_color{ color_P }, breed{ breed_P }, beak_lenth{ beak_P } { }
+	Parrot(const string& color_P, string breed_P, int beak_P, string class_P, string area_P, int duration_P) : feather_color{ color_P }, breed{ breed_P }, beak_lenth{ beak_P }, Animal{ class_P, area_P, duration_P } { }
 
 	Parrot(const Parrot& obj) : feather_color{ obj.feather_color }, breed{ obj.breed }, beak_lenth{ obj.beak_lenth } { }
 
