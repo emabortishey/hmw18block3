@@ -4,13 +4,18 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	Cat obj("Physics", "30%", 5);
+	// тесты для каждог класса
 
-	obj.set_name("Oleg");
-	obj.set_cource(3);
-	obj.set_age(20);
+	Cat obj("Turtle + white", "Manekun", 10, "Pets", "Cities and forests", 20);
+	Dog obj1("Grey + white", "Grauhound", 42, "Pets", "Cities and farms", 18);
+	Parrot obj2("White + yellow", "Kakadoo", 7, "Wild bird", "Tropical forests", 30);
 
 	obj.print();
+	cout << '\n';
+	obj1.print();
+	cout << '\n';
+	obj2.print();
+	cout << '\n';
 
 	return 0;
 }
